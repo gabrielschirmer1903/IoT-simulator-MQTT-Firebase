@@ -1,0 +1,16 @@
+{
+  "name": "aws-mqtt-dht",
+  "version": "1.0.0",
+  "description": "MQTT client to publish DHT sensor data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "techbeast.org",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^4.2.8",
+    "node-dht-sensor": "^0.4.2",
+    "firebase": "^8.6.8"
+  }
+}

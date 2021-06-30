@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <title>IoT thermo sensor</title>
+  <script src="https://unpkg.com/mqtt@4.1.0/dist/mqtt.min.js"></script>
+</head>
+
+<body>
+    <div class="BorderMargin">
+
+        <h3>Temperature: <span id="sensor-value">-</span>C</h3>
+        <!--display your sensor data -->
+
+
+    </div>
+
+    <script>
+      var client = mqtt.connect("ws://brokerip");
+
+      
+      function timer() {
+        var temp = Math.floor(Math.random() * 100);
+        const y = new Date();
+        const m = new Date();
+        const d = new Date();
+        const h = new Date();
+        const xx = new Date();
+        const minutes = new Date();
+        const s =  new Date();
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var day = (d.getDate()+'/'+months[m.getMonth()]+'/'+y.getFullYear());
+        var hour = (d.getHours()+':'+m.getMinutes()+' '+y.getSeconds());
+
+        var payload = {
+                "Temperature" : temp,
+                "Date" : [{
+                        "Day" : day,
+                        "Time" : hour
+                }]
+        };
+
+        client.publish(
+          "mqtt/temp",
+          JSON.stringify(payload)
+
+        );
+        var output = document.getElementById("sensor-value");
+        output.innerHTML = JSON.parse(temp);
+
+        console.log("topic published to the broker");
+        var timestamp = Date.now();
+        // console.log(day)
+        console.log(payload)
+        // console.log(hour)
+
+      }
+
+      setInterval(timer, 5000);
+
+
+
+
+    </script>
+</body>
+
+</html>
