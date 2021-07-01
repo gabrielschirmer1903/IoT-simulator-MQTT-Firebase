@@ -1,0 +1,74 @@
+.thermometer {
+  display: block;
+  position: relative;
+  height: 100px;
+}
+.bulb{
+  display: inline-block;
+    border: 2px solid #222;
+    width: 20px;
+    height: 21px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-top: 2px solid #000;
+    box-shadow: 0px 0px 0px 1px #fff inset;
+    background: red;
+}
+.stem {
+  display: inline-block;
+    border: 2px solid #222;
+    width: 12px;
+    height: 80px;
+    border-radius: 0px 0px 20px 20px;
+    border-top: 2px solid transparent;
+    position: absolute;
+    bottom: 16px;
+    left: 4px;
+    box-shadow: 0px 0px 0px 2px #fff inset;
+    transform: rotate(180deg);
+    z-index: 10;
+    padding-bottom: 3px;
+}
+.stem-perct {
+  height: 80% !important;
+  width: 6px;
+  background: red;
+  display: block;
+  margin: 0px auto;
+  border-radius: 10px;
+}
+.bulb: after {
+  content: "";
+  height: 10px;
+  width: 8px;
+  background: inherit;
+  position: absolute;
+  left: 6px;
+  bottom: 13px;
+  z-index: 12;
+}
+
+.containertab{
+  position: fixed;
+  left: 40%;
+}
+.containerterm{
+  position: fixed;
+  left: 20%;
+  top: 10%;
+  padding: 15px;
+  border: 2px solid;
+}
+.contagem{
+  position: fixed;
+  top: 33%;
+  left: 20%;
+  padding: 15px;
+  border: 2px solid;
+}
+
+.tabela{
+  text-align: center;
+}
