@@ -3,7 +3,7 @@
   position: relative;
   height: 100px;
 }
-.bulb{
+.bulb {
   display: inline-block;
     border: 2px solid #222;
     width: 20px;
@@ -32,7 +32,7 @@
     padding-bottom: 3px;
 }
 .stem-perct {
-  height: 80% !important;
+  height: 80%;
   width: 6px;
   background: red;
   display: block;

@@ -27,7 +27,7 @@
       document.getElementById("var_lista").click();
     })
   }
-  setInterval(timer , 10)
+  setInterval(timer , 100)
 
 
   var db = firebaseRef = firebase.database().ref('TempSensor/').child('log')
