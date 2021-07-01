@@ -14,7 +14,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var mqtt = require("mqtt");
-var client = mqtt.connect("ws://brokerip");
+var client = mqtt.connect("ws://18.117.135.87:9001");
 
 client.subscribe("mqtt/temp")
 client.on("message", function (topic, payload) {
